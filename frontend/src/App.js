@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 // import basic react requirements
 import React from 'react';
 import { Admin, Resource } from 'react-admin';
@@ -31,30 +30,5 @@ const App = () => {
         </Admin>
     )
 };
-=======
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
->>>>>>> 92a43c08a895a6294e60b5e5d63eefd33d7fa641
 
 export default App;
