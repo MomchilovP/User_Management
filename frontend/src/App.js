@@ -12,19 +12,20 @@ import { authProvider } from './provider/firebaseProvider';
 
 // import styling and icons
 import { LocationOn, Person } from '@material-ui/icons';
-import CustomLoginPage from './components/loginPage';
+// import CustomLoginPage from './components/loginPage';
 import { theme } from './components/theme';
 // import { customRoutes } from './customRoutes'; need to fix the export
 
+// loginPage={CustomLoginPage}
 
 const App = () => {
     return (
-        <Admin title='User M.' theme={theme} loginPage={CustomLoginPage} dataProvider={djangoDataProvider} authProvider={authProvider}>
+        <Admin title='User M.' theme={theme} dataProvider={djangoDataProvider} authProvider={authProvider}>
             {permissions => {
                 console.log('test', permissions);
                 return ([
                     <Resource name="users" icon={Person} list={UsersList} create={UserCreate} edit={UserEdit} />,
-                    <Resource name="location" icon={LocationOn} list={ListLocators} create={permissions['admin'] === true ? CreateLocator : null} edit={permissions['admin'] === true ? EditLocator : null} />
+                    <Resource name="locators" icon={LocationOn} list={ListLocators} create={permissions['admin'] === true ? CreateLocator : null} edit={permissions['admin'] === true ? EditLocator : null} />
                 ])
             }}
         </Admin>

@@ -1,4 +1,4 @@
-import drfProvider from 'ra-data-drf';
+import drfProvider from 'ra-data-django-rest-framework';
 import { authProvider } from './firebaseProvider';
 import { fetchUtils } from 'react-admin';
 
